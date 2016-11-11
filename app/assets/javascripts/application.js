@@ -17,18 +17,5 @@
 //= require_tree .
 
 
-// $(document).ready(function(){
-// 	$(".col").click(function(){
-// 		$(".row").show();
-// 	});
-// });
 
-$('#submit').click(function(){
-        if($('.col1').val()=="" && $('.col2').val()=="" ){
-                $('.col1').css('border-color','red');
-                $('.col2').css('border-color','red');
-        }
-        else{
-            return;
-        }
-    });
+

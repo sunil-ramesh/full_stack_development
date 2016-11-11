@@ -13,11 +13,10 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-     if @user.save
+     @user.save
+    
      redirect_to new_login_path
- else
- 	render "new"
-      end
+ 
     end
   
 

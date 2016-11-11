@@ -17,33 +17,48 @@
           <h4 class="modal-title"></h4>
         </div>
         <div class="modal-body">
-          <div class="row">
- <div class="col-md-6 col-md-offset-3">
+        <div class="container">
+          <div class="form-group">
+ <div class="col-md-4">
+
    <%= form_for :user do |f| %>
-     <%= f.label :first_name  %>
-     <%= f.text_field :first_name,class:"col1" %><br><br>
 
-     <%= f.label :last_name%>
-     <%= f.text_field :last_name,class:"col1" %><br><br>
+   <% if @user.errors.any? %>
+  
+    <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
 
-     <%= f.label :username %>
-     <%= f.text_field :username,class:"col1" %><br><br>
+
+     <%= f.label :first_name  %><br>
+     <%= f.text_field :first_name %><br>
+
+     <%= f.label :last_name%><br>
+     <%= f.text_field :last_name,class: "col1" %><br>
+
+     <%= f.label :username %><br>
+     <%= f.text_field :username,class: "col1"%><br>
      
-     <%= f.label :phone_number %>
-     <%= f.text_field :phone_number,class:"col2" %><br><br>
-     <%= f.label :email %>
-     <%= f.text_field :email,class:"col1" %><br><br>
+     <%= f.label :phone_number %><br>
+     <%= f.text_field :phone_number,class: "col2" %><br>
+     <%= f.label :email %><br>
+     <%= f.text_field :email %><br>
 
-     <%= f.label :password %>
-     <%= f.password_field :password ,class:"col2"%><br><br>
+     <%= f.label :password %><br>
+     <%= f.password_field :password,class: "col2"%><br>
 
-     <%= f.label :password_confirmation, "Confirmation" %>
-     <%= f.password_field :password_confirmation,class:"col2" %><br><br>
+     <%= f.label :password_confirmation, "Confirmation" %><br>
+     <%= f.password_field :password_confirmation,class: "col2" %><br><br>
     
      <%= f.submit %><br><br>
    <% end %>
 
  </div>
+</div>
 </div>
 </div>
         </div>

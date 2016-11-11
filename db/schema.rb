@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 20161111063928) do
     t.string   "date"
     t.string   "time"
     t.string   "description"
-    t.string   "invitees"
+    t.integer  "invitees"
     t.string   "status"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 20161111063928) do
     t.string   "username"
     t.integer  "phone_number"
     t.string   "email"
-    t.string   "password"
+    t.string   "password_digest"
     t.string   "password_confirmation"
     t.datetime "created_at",            null: false
     t.datetime "updated_at",            null: false

@@ -6,7 +6,7 @@ class CreateActions < ActiveRecord::Migration
       t.string :date
       t.string :time
       t.string :description
-      t.string :invitees
+      t.integer :invitees
       t.string :status
 
       t.timestamps null: false

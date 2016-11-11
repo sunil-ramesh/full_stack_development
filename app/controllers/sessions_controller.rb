@@ -4,9 +4,7 @@ class SessionsController < ApplicationController
 		@session=Session.all
 		
 	end
-	def show
-    @session = Session.find(params[:id])
-  end
+	
 
   def new
     @session = Session.new
@@ -15,7 +13,8 @@ class SessionsController < ApplicationController
   def create
     @session = Session.new(session_params)
        @session.save
-     redirect_to new_action_path
+
+     
       
     end
   
