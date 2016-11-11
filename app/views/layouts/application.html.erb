@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Event</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+ <header class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container">
+        <%= link_to "", '#', id: "logo" %>
+        <nav>
+          <ul class="nav navbar-nav navbar-right">
+            <%= link_to "Create new event", new_login_path,
+                                     class: "btn btn-lg btn-primary" %>
+   <% else %>
+     <%= link_to "Sign up now!", new_signup_path,
+                                 class: "btn btn-lg btn-primary" %>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="container">
+      <%= yield %>
+    </div>
+
+</body>
+</html>
